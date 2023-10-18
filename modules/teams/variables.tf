@@ -33,6 +33,6 @@ variable "github_token" {
 }
 
 variable "owner_name" {
-  description = "value of the owner name"
+  description = "Oganisation name where team will be created"
   type = string
 }
