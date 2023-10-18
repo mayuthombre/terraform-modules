@@ -6,3 +6,9 @@ terraform {
     }
   }
 }
+
+provider "github" {
+  # Configuration options
+  owner = var.owner_name
+  token = var.github_token
+}

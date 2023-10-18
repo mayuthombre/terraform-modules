@@ -1,17 +1,3 @@
-#### usage of variable - member
-#    members = [
-#    {
-#      username = github_membership.user1.username,
-#      role = member
-#    },
-#    {
-#      username = user2,
-#      role = member
-#    },
-#    {
-#      username = github_membership.user3.username,
-#    },
-#  ]
 variable "members" {
   type = list(object({
     username = string
@@ -39,4 +25,14 @@ variable "description" {
 variable "parent_team_id" {
   type    = number
   default = null
+}
+
+variable "github_token" {
+  description = "GitHub access token used to configure the provider"
+  type        = string
+}
+
+variable "owner_name" {
+  description = "value of the owner name"
+  type = string
 }
