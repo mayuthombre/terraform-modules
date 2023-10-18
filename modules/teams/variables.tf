@@ -26,3 +26,13 @@ variable "parent_team_id" {
   type    = number
   default = null
 }
+
+variable "github_token" {
+  description = "GitHub access token used to configure the provider"
+  type        = string
+}
+
+variable "owner_name" {
+  description = "Oganisation name where team will be created"
+  type = string
+}
