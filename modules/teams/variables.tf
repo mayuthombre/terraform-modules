@@ -27,12 +27,12 @@ variable "parent_team_id" {
   default = null
 }
 
-variable "github_token" {
-  description = "GitHub access token used to configure the provider"
-  type        = string
-}
+# variable "github_token" {
+#   description = "GitHub access token used to configure the provider"
+#   type        = string
+# }
 
-variable "owner_name" {
-  description = "value of the owner name"
-  type = string
-}
+# variable "owner_name" {
+#   description = "value of the owner name"
+#   type = string
+# }
