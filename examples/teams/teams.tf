@@ -3,6 +3,7 @@ module "test-team-1" {
 
   name    = "Test Team 1"
   members = []
+  token   = var.token
 }
 
 #module "test-team-2" {
