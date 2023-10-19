@@ -8,25 +8,6 @@ resource "github_team" "team" {
   parent_team_id = var.parent_team_id
 }
 
-# resource "github_team_membership" "members" {
-#   for_each = { for member in var.members : member.username => member }
-#   team_id  = github_team.team.id
-#   username = each.value.username
-#   role     = each.value.role == null ? "member" : each.value.role
-# }
-
-# resource "github_team_membership" "members" {
-#   for_each = {
-#     for member in concat(
-#       local.team_members.maintainers,
-#       local.team_members.members
-#     ) : member.username => member
-#   }
-#   team_id  = github_team.team.id
-#   username = each.key
-#   role     = try(each.value.role, var.default_role)
-# }
-
 resource "github_team_membership" "members" {
   for_each = {
     for username in concat(
