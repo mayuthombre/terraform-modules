@@ -36,3 +36,18 @@ variable "owner_name" {
   description = "Oganisation name where team will be created"
   type = string
 }
+
+variable "repo_vars" {
+  type = list(object({
+    reponame = string
+    permission = optional(string)
+  }))
+  default = []
+  description = <<EOT
+  List of repos to be added for the team and its permissions. For each repo:
+    - reponame: Github repository name.
+    - permissions: Permission to be granted on that repository for the team
+        - pull (default)
+        - maintain
+  EOT
+}
