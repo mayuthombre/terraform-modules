@@ -10,3 +10,10 @@ resource "github_team_membership" "members" {
   username = each.value.username
   role     = each.value.role == null ? "member" : each.value.role
 }
+
+resource "github_team_repository" "teams" {
+  for_each   = { for repo in var.repo_vars : repo.reponame => repo }
+  team_id    = github_team.team.id
+  repository = each.value.reponame
+  permission = each.value.permission == null ? "pull" : each.value.permission
+}
