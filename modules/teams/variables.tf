@@ -16,6 +16,7 @@
 variable "json_file" {
   description = "Path to the JSON file containing team members."
   type        = string
+  default     = null
 }
 
 variable "name" {
@@ -39,7 +40,7 @@ variable "github_token" {
 
 variable "owner_name" {
   description = "Oganisation name where team will be created"
-  type = string
+  type        = string
 }
 
 variable "default_role" {
