@@ -41,3 +41,9 @@ variable "owner_name" {
   description = "Oganisation name where team will be created"
   type = string
 }
+
+variable "default_role" {
+  description = "Default role for team members if not specified in the JSON."
+  type        = string
+  default     = "member"
+}

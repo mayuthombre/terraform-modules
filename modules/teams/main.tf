@@ -24,5 +24,5 @@ resource "github_team_membership" "members" {
   }
   team_id  = github_team.team.id
   username = each.key
-  role     = each.value.role
+  role     = try(each.value.role, var.default_role)
 }
