@@ -1,7 +1,7 @@
 module "test-team-1" {
+  source       = "../../modules/teams"
 
-  source = "../../modules/teams"
-  name    = "Test Team 1"
-  members = []
-  github_token   = var.github_token
+  for_each     = var.team_var
+  name         = each.key
+  members      = each.value
 }
