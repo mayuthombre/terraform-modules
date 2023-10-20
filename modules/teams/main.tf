@@ -1,19 +1,39 @@
+locals {
+  team_data = jsondecode(file(var.json_file))
+
+  team_name = local.team_data.team_name
+
+  maintainers = local.team_data.maintainers
+  members = local.team_data.members
+
+  admin_repos = local.team_data.repos.admin
+  maintain_repos = local.team_data.repos.maintain
+  push_repos = local.team_data.repos.push
+  triage_repos = local.team_data.repos.triage
+
+  uniq_members = distinct(concat(local.team_data.maintainers,local.team_data.members))
+  uniq_repos = distinct(concat(local.team_data.repos.admin,local.team_data.repos.maintain,local.team_data.repos.push,local.team_data.repos.triage))
+  #uniq_repos = distinct(local.team_data.repos[*].*)
+
+}
+
+
 resource "github_team" "team" {
-  name           = var.name
+  name           = local.team_name
   description    = var.description
-  parent_team_id = var.parent_team_id
+  parent_team_id = var.parent_team_id # needs to be added in input json and get the id using data source
 }
 
 resource "github_team_membership" "members" {
-  for_each = { for member in var.members : member.username => member }
+  for_each = toset(local.uniq_members)
   team_id  = github_team.team.id
-  username = each.value.username
-  role     = each.value.role == null ? "member" : each.value.role
+  username = "${each.key}_FuroEMU"
+  role     = contains(local.maintainers, each.key) ? "maintainer" : "member"
 }
 
 resource "github_team_repository" "teams" {
-  for_each   = { for repo in var.repo_vars : repo.reponame => repo }
+  for_each   = toset(local.uniq_repos)
   team_id    = github_team.team.id
-  repository = each.value.reponame
-  permission = each.value.permission == null ? "pull" : each.value.permission
+  repository = each.key
+  permission =  contains(local.admin_repos, each.key) ? "admin" : contains(local.maintain_repos, each.key) ? "maintain" : contains(local.push_repos, each.key) ? "push" : contains(local.triage_repos, each.key) ? "triage" : "pull"
 }

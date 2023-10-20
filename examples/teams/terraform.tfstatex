@@ -1,0 +1,137 @@
+{
+  "version": 4,
+  "terraform_version": "1.6.1",
+  "serial": 24,
+  "lineage": "6561f3e3-b2f6-d7f8-f2e2-6cc6805184ee",
+  "outputs": {},
+  "resources": [
+    {
+      "module": "module.teams",
+      "mode": "managed",
+      "type": "github_team",
+      "name": "team",
+      "provider": "module.teams.provider[\"registry.terraform.io/integrations/github\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "create_default_maintainer": false,
+            "description": "",
+            "etag": "W/\"22098a01645bdee802f293e9546786987a395e5508a19f945659990410eee718\"",
+            "id": "8803885",
+            "ldap_dn": "",
+            "members_count": 0,
+            "name": "Terraform Test Team 2",
+            "node_id": "T_kwDOCGgYhc4AhlYt",
+            "parent_team_id": "",
+            "parent_team_read_id": null,
+            "parent_team_read_slug": null,
+            "privacy": "secret",
+            "slug": "terraform-test-team-2"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "module": "module.teams",
+      "mode": "managed",
+      "type": "github_team_membership",
+      "name": "members",
+      "provider": "module.teams.provider[\"registry.terraform.io/integrations/github\"]",
+      "instances": [
+        {
+          "index_key": "mayuresh-thombre_FuroEMU",
+          "schema_version": 0,
+          "attributes": {
+            "etag": "W/\"a19429bd56ae308bc0370a35da098625b0cd0edcfdc773784f4499328d9ed8aa\"",
+            "id": "8803885:mayuresh-thombre_FuroEMU",
+            "role": "maintainer",
+            "team_id": "8803885",
+            "username": "mayuresh-thombre_FuroEMU"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.teams.github_team.team"
+          ]
+        },
+        {
+          "index_key": "sasidhara-navuluri_FuroEMU",
+          "schema_version": 0,
+          "attributes": {
+            "etag": "W/\"ea48e774d75bd9092a4b02cacf1007e95bdb1db80ccf943fce7c0d551d9258b4\"",
+            "id": "8803885:sasidhara-navuluri_FuroEMU",
+            "role": "maintainer",
+            "team_id": "8803885",
+            "username": "sasidhara-navuluri_FuroEMU"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.teams.github_team.team"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.teams",
+      "mode": "managed",
+      "type": "github_team_repository",
+      "name": "teams",
+      "provider": "module.teams.provider[\"registry.terraform.io/integrations/github\"]",
+      "instances": [
+        {
+          "index_key": "organisation-team-config",
+          "schema_version": 0,
+          "attributes": {
+            "etag": "W/\"37a2563bb837eb13fbc68c77cd0cb87a646188cda960fd254a3aa113d4a1be1f\"",
+            "id": "8803885:organisation-team-config",
+            "permission": "maintain",
+            "repository": "organisation-team-config",
+            "team_id": "8803885"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.teams.github_team.team"
+          ]
+        },
+        {
+          "index_key": "usyd-utility-api",
+          "schema_version": 0,
+          "attributes": {
+            "etag": "W/\"49755eb416d8886b17f4a8e412e188d51f6febdd089cb599511dedfbf4e9d90e\"",
+            "id": "8803885:usyd-utility-api",
+            "permission": "pull",
+            "repository": "usyd-utility-api",
+            "team_id": "8803885"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.teams.github_team.team"
+          ]
+        },
+        {
+          "index_key": "webhooktest",
+          "schema_version": 0,
+          "attributes": {
+            "etag": "W/\"054dd051e3ef0ef2eff5ac5f35ca82cca359a0e794e4ab24f90ea5699eb6df49\"",
+            "id": "8803885:webhooktest",
+            "permission": "pull",
+            "repository": "webhooktest",
+            "team_id": "8803885"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.teams.github_team.team"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
