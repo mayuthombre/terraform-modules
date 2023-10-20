@@ -2,6 +2,7 @@ locals {
   team_data = jsondecode(file(var.json_file))
 
   team_name = local.team_data.team_name
+  team_description = local.team_data.description
 
   maintainers = local.team_data.maintainers
   members = local.team_data.members
@@ -13,14 +14,13 @@ locals {
 
   uniq_members = distinct(concat(local.team_data.maintainers,local.team_data.members))
   uniq_repos = distinct(concat(local.team_data.repos.admin,local.team_data.repos.maintain,local.team_data.repos.push,local.team_data.repos.triage))
-  #uniq_repos = distinct(local.team_data.repos[*].*)
 
 }
 
 
 resource "github_team" "team" {
   name           = local.team_name
-  description    = var.description
+  description    = local.team_description
   parent_team_id = var.parent_team_id # needs to be added in input json and get the id using data source
 }
 
