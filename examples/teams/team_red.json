@@ -19,7 +19,7 @@
         "usyd-rsc-irma-sys-api",
         "usyd-utility-api"
       ],
-      "write": [
+      "push": [
         "usyd-sits-passwordsync",
         "usyd-mule-common-api-template"
       ],
