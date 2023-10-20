@@ -6,5 +6,4 @@ variable "github_token" {
 variable "json_file" {
   description = "Path to the JSON file containing team members."
   type        = string
-  default     = null
 }

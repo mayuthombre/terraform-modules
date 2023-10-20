@@ -28,7 +28,7 @@ resource "github_team_membership" "members" {
   for_each = toset(local.uniq_members)
   team_id  = github_team.team.id
   username = "${each.key}_FuroEMU"
-  role     = contains(local.maintainers, each.key) ? "maintainer" : var.default_role
+  role     = contains(local.maintainers, each.key) ? "maintainer" : "member"
 }
 
 resource "github_team_repository" "teams" {
