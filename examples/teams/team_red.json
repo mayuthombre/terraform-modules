@@ -1,5 +1,6 @@
 {
-    "name": "Test Team Red",
+    "team_name": "Red team",
+    "description": "Red team",
     "maintainers": [
       "alan-ly",
       "jorge-arias"
