@@ -20,7 +20,8 @@ variable "json_file" {
 }
 
 variable "name" {
-  type = string
+  type    = string
+  default = null
 }
 
 variable "description" {
