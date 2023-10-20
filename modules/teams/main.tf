@@ -16,6 +16,6 @@ resource "github_team_membership" "members" {
     ) : username => username
   }
   team_id  = github_team.team.id
-  username = each.key
+  username = "${each.key}_FuroEMU"
   role     = contains(local.team_members.maintainers, each.key) ? "maintainer" : var.default_role
 }
