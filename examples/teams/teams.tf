@@ -1,8 +1,7 @@
-module "teams" {
+module "team_red" {
+  #source       = "git::https://github.com/mayuthombre/terraform-modules.git//modules/teams?ref=tf/json"
   source       = "../../modules/teams"
-  name         = "Terraform Test Team 1"
-  members      = var.team_members
+  json_file    = "team_red.json"
   owner_name   = "furo-migrations-emu"
   github_token = var.github_token
-  repo_vars    = var.team_members_repos
 }
