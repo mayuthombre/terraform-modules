@@ -1,0 +1,14 @@
+{
+    "team_name": "Orange team",
+    "description": "Orange team",
+    "maintainers": [
+      "mayuresh-thombre_FuroEMU",
+      "jorge-arias_FuroEMU"
+    ],
+    "repos": {
+      "admin": [
+        "usyd-sits-passwordsync",
+        "usyd-mule-common-api-template"
+      ]
+    }
+}
