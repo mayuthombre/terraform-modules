@@ -165,7 +165,7 @@ To add new member or a maintainer to the team, please follow these steps:
 ```
 5. Commit your code changed and raise a PR for review
 6. Track PR comment section for terraform plan. If there are any failures, please ensure to fix it before requesting review
-7. Once reviewer approves the PR, terraform will do auto apply and your new team will be created
+7. Once reviewer approves the PR, terraform will do auto apply and your username will be added to the respective team
 
 
 ## Removing a user from the team
@@ -178,7 +178,7 @@ To remove member or a maintainer from the team, please follow these steps:
 4. Remove the UniKey belonging to member / maintainer from JSON file
 5. Commit your code changed and raise a PR for review
 6. Track PR comment section for terraform plan. If there are any failures, please ensure to fix it before requesting review
-7. Once reviewer approves the PR, terraform will do auto apply and your new team will be created
+7. Once reviewer approves the PR, terraform will do auto apply and remove user from the team
 
 ## Adding a repository to the team
 
@@ -210,7 +210,7 @@ To add new repository to the team, please follow these steps:
 ```
 5. Commit your code changed and raise a PR for review
 6. Track PR comment section for terraform plan. If there are any failures, please ensure to fix it before requesting review
-7. Once reviewer approves the PR, terraform will do auto apply and your new team will be created
+7. Once reviewer approves the PR, terraform will do auto apply and add repository to the team
 
 
 ## Removing a repository from the team
@@ -223,4 +223,4 @@ To remove repository from the team, please follow these steps:
 4. Remove the repository name from JSON file
 5. Commit your code changed and raise a PR for review
 6. Track PR comment section for terraform plan. If there are any failures, please ensure to fix it before requesting review
-7. Once reviewer approves the PR, terraform will do auto apply and your new team will be created
+7. Once reviewer approves the PR, terraform will do auto apply and remove repository from the team
