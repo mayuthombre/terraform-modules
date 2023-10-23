@@ -1,0 +1,14 @@
+{
+    "team_name": "White team",
+    "description": "White team",
+    "maintainers": [
+      "mayuresh-thombre_FuroEMU",
+      "jorge-arias_FuroEMU"
+    ],
+    "repos": {
+      "admin": [
+        "organisation-team-config",
+        "webhooktest"
+      ]
+    }
+}

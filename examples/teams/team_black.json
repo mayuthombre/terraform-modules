@@ -1,14 +1,14 @@
 {
-    "team_name": "Red team",
-    "description": "Red team",
+    "team_name": "Black team",
+    "description": "Black team",
     "maintainers": [
-      "alan-ly",
-      "jorge-arias"
+      "alan-ly_FuroEMU",
+      "jorge-arias_FuroEMU"
     ],
     "members": [
-      "sasidhara-navuluri",
-      "tom-kavanagh",
-      "jorge-arias"
+      "sasidhara-navuluri_FuroEMU",
+      "tom-kavanagh_FuroEMU",
+      "jorge-arias_FuroEMU"
     ],
     "repos": {
       "admin": [
